@@ -15,8 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fragment fragment = new FragmentIklan();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+        FragmentIklan fragment = FragmentIklan.newInstance("Activity 1", 123);
+
+
+
+
+
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, fragment)
+                .commit();
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {

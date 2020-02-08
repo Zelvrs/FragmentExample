@@ -12,8 +12,11 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        FragmentIklan fragment = FragmentIklan.newInstance("Activity 2", 456);
 
-        Fragment fragment = new FragmentIklan();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, fragment)
+                .commit();
     }
 }
